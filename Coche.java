@@ -1,6 +1,6 @@
 public class Coche {
     public String marca;
-    public long kilometros;
+    public boolean nuevo;
     public String modelo;
     public int caballos;
 
@@ -12,12 +12,12 @@ public class Coche {
         this.marca = marca;
     }
 
-    public long getKilometros() {
-        return kilometros;
+    public boolean esNuevo() {
+        return nuevo;
     }
 
-    public void setKilometros(long kilometros) {
-        this.kilometros = kilometros;
+    public void setNuevo(boolean nuevo) {
+        this.nuevo = nuevo;
     }
 
     public String getModelo() {
@@ -29,7 +29,10 @@ public class Coche {
     }
 
     public int getCaballos() {
-        return caballos;
+        if (this.caballos > 60)
+	return caballos;
+	else
+	return -1;
     }
 
     public void setCaballos(int caballos) {
